@@ -39,7 +39,7 @@ export default class Coolness {
 		whoIsBeingMadeCool = escape_username(whoIsBeingMadeCool);
 
 		if (this.howCool(whoIsMakingCool) > ( this.howCool(whoIsBeingMadeCool) << 1 ) ) {
-			this.__data.__set(whoIsBeingMadeCool, this.howCool(whoIsMakingCool) * Math.ceil( this.howCool(whoIsMakingCool) * 2 / 3 ));
+			this.__data.__set(whoIsBeingMadeCool, Math.ceil( this.howCool(whoIsMakingCool) * 2 / 3 ));
 			return true;
 		} else return false;
 	}
